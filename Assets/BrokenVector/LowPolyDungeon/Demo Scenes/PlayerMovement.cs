@@ -47,9 +47,14 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-        if (Input.GetButtonDown("Attack"))
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            animator.SetTrigger("Attack");
+            animator.SetBool("Attack", true);
+        }
+        else
+        {
+            animator.SetBool("Attack", false);
         }
 
         velocity.y += gravity * Time.deltaTime;
