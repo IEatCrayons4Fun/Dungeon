@@ -11,6 +11,7 @@ public class WeaponDamage : MonoBehaviour
             BasicEnemy enemy = collision.gameObject.GetComponent<BasicEnemy>();
             if(enemy != null)
             {
+                Debug.Log("Enemy has taken damage");
                 enemy.TakeDamage(damage);
             }
         }
