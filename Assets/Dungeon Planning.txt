@@ -1,0 +1,25 @@
+Parkour Room
+    - Platforms
+    - Key (Text following player)
+    - Figure Out Jumping
+
+Center
+    - More Decor
+    - One More Section then lead to next part
+
+Downstairs
+    - Plan what it looks like
+    - Enemys
+    - Make Weapon work 
+    - Animation for enemys
+
+
+Extra Time Projects:
+
+Bob and Toms Jail
+    - Readable Note
+    (lore)
+
+Player
+    - More Animations
+

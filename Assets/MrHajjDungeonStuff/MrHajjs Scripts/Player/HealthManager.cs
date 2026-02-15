@@ -20,7 +20,6 @@ public class HealthManager : MonoBehaviour
         Debug.Log("Current health after: " + currentHealth);
         
         if(currentHealth <= 0){
-            Debug.Log("Health is 0, calling Respawn()");
             Respawn();
         }
     }
@@ -45,7 +44,7 @@ public class HealthManager : MonoBehaviour
             
         }
         else{
-            
+            SceneManager.LoadScene("DeathScreen");
         }
     }
 }
