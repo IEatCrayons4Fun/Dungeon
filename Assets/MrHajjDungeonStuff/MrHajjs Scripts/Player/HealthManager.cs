@@ -1,37 +1,51 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class HealthManager : MonoBehaviour
 {
     public GameObject checkpoint;
     public int maxHealth = 100;
     [SerializeField] private float currentHealth;
-    //private Rigidbody rb;
 
+    private CharacterController controller;
+    
     private void Start(){
         currentHealth = maxHealth;
-       //rb = this.GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
     }
-
+    
     public void TakeDamage(float damage){
+        Debug.Log("Taking damage: " + damage + " | Current health before: " + currentHealth);
         currentHealth -= damage;
-        //Debug.Log("Took Damage: " +damage);
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        Debug.Log("Current health after: " + currentHealth);
+        
         if(currentHealth <= 0){
-            //You might want to change this if you wanted a respawn screen.
+            Debug.Log("Health is 0, calling Respawn()");
             Respawn();
         }
     }
-
+    
     public void Heal(float healAmount){
         currentHealth += healAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     }
-
+    
     private void Respawn(){
-        Debug.Log("You Respawned");
+        
+        
         if(checkpoint != null){
+            
+
+            controller.enabled = false; 
             this.transform.position = checkpoint.transform.position;
-            //rb.linearVelocity = Vector3.zero;
+            controller.enabled = true; 
+            
+            
+            currentHealth = maxHealth;
+            
+        }
+        else{
+            
         }
     }
 }
