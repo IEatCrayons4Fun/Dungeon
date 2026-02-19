@@ -1,13 +1,13 @@
 Parkour Room
-    - Platforms
+    - Platforms [X]
     - Key (Text following player)
-    - Figure Out Jumping
+    - Figure Out Jumping [X]
 
 Center
     - More Decor
     - One More Section then lead to next part
 
-Downstairs
+Downstairs (Unlock Downstairs with Bob and Tom)
     - Plan what it looks like
     - Enemys
     - Make Weapon work 

@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Weapon
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GroundLayer
   - Water
   - UI
   - 
