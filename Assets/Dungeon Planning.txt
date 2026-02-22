@@ -1,11 +1,20 @@
 Parkour Room
-    - Platforms [X]
     - Key (Text following player)
-    - Figure Out Jumping [X]
-
+    - Secret Button leads to Bob and Tom
 Center
     - More Decor
     - One More Section then lead to next part
+
+Next Room
+    - Bookcase (Interatect with bookcase after read a easter egg)
+    - Rotate the wall with player on it
+        (Only show up after finding easter egg to read)
+        (Collider && Interatect)
+
+Third Room
+    - Door 
+        (Without key does a riddle for saying the key is a puzzle in this room)
+
 
 Downstairs (Unlock Downstairs with Bob and Tom)
     - Plan what it looks like
