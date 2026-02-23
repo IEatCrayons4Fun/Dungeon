@@ -6,6 +6,6 @@ public class KeyScript : PickupBase
     [SerializeField] DoorScript door;
     public override void PickupEffect(){
         base.PickupEffect();
-        door.Unlock();
+        door.Interacted();
     }
 }
