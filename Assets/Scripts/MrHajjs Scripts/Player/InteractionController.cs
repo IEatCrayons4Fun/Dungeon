@@ -27,7 +27,7 @@ public class InteractionController : MonoBehaviour
 
     private void Interact(){
         if(Physics.Raycast(cam.gameObject.transform.position, cam.gameObject.transform.forward, out RaycastHit hitData, interactRange)){
-            Debug.DrawLine(cam.gameObject.transform.position, cam.gameObject.transform.forward * interactRange, Color.red, 2f);
+            Debug.DrawLine(cam.transform.position, hitData.point, Color.red, 2f);
             IInteractable interactable  = hitData.transform.gameObject.GetComponent<IInteractable>();
             if(interactable != null){
                 interactable.Interacted();

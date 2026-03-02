@@ -21,6 +21,7 @@ public class HealthManager : MonoBehaviour
         
         if(currentHealth <= 0){
             Respawn();
+
         }
     }
     
@@ -46,5 +47,8 @@ public class HealthManager : MonoBehaviour
         else{
             SceneManager.LoadScene("DeathScreen");
         }
+        
+        Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory.ClearInventory();
     }
 }

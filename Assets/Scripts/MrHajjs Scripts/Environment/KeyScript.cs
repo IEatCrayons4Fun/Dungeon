@@ -2,10 +2,18 @@ using UnityEngine;
 
 public class KeyScript : PickupBase
 {
-    [Header("Key")]
-    [SerializeField] DoorScript door;
-    public override void PickupEffect(){
-        base.PickupEffect();
-        door.Interacted();
+    public string itemName;
+
+
+    public override void PickupEffect()
+    {
+        Inventory inventory = player.GetComponent<Inventory>();
+        if (inventory != null)
+        {
+            inventory.AddItem(itemName);
+            base.PickupEffect();
+        }
+        
     }
+    
 }
