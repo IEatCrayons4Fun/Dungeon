@@ -4,7 +4,7 @@ public class DoorScript : MonoBehaviour, IInteractable
 {
     public string requiredKey;
     private Inventory inventory;
-    
+    [SerializeField] Animator doorAnimator;
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -17,7 +17,7 @@ public class DoorScript : MonoBehaviour, IInteractable
         if(inventory.HasItem(requiredKey))
         {
             inventory.RemoveItem(requiredKey);
-            DoorOpen();
+            doorAnimator.SetTrigger("Open");
         }
         else
         {

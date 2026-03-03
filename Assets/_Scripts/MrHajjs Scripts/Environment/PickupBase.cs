@@ -16,6 +16,7 @@ public class PickupBase : MonoBehaviour
     void Start()
     {
         startPos = this.gameObject.transform.position;
+        ItemRespawnManager.instance?.RegisterItem(this);
     }
 
     void Update()
@@ -33,5 +34,10 @@ public class PickupBase : MonoBehaviour
     }
     public virtual void PickupEffect(){
         this.gameObject.SetActive(false);
+    }
+
+    public void Respawn(){
+        this.gameObject.SetActive(true);
+        startPos = this.gameObject.transform.position;
     }
 }

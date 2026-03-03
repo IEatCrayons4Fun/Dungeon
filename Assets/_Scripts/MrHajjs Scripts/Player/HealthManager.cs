@@ -50,5 +50,6 @@ public class HealthManager : MonoBehaviour
         
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         inventory.ClearInventory();
+        ItemRespawnManager.instance.RespawnAllItems();
     }
 }
