@@ -31,7 +31,7 @@ public class DoorScript : MonoBehaviour, IInteractable
         DoorOpen();
     }
 
-    void DoorOpen(){
+    public void DoorOpen(){
         gameObject.SetActive(false);
         Debug.Log("Door has been opened!");
     }

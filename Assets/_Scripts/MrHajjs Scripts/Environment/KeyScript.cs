@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KeyScript : PickupBase
+public class KeyScript : PickupBase, IInteractable
 {
     public string itemName;
 
@@ -12,6 +12,15 @@ public class KeyScript : PickupBase
         {
             inventory.AddItem(itemName);
             base.PickupEffect();
+        }
+    }
+    public void Interacted()
+    {
+        Inventory inventory = player.GetComponent<Inventory>();
+        if (inventory != null)
+        {
+            inventory.AddItem(itemName);
+            Destroy(this.gameObject);
         }
         
     }

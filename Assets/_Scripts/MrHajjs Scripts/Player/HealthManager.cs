@@ -33,20 +33,9 @@ public class HealthManager : MonoBehaviour
     private void Respawn(){
         
         
-        if(checkpoint != null){
-            
-
-            controller.enabled = false; 
-            this.transform.position = checkpoint.transform.position;
-            controller.enabled = true; 
-            
-            
-            currentHealth = maxHealth;
-            
-        }
-        else{
-            SceneManager.LoadScene("DeathScreen");
-        }
+        SceneManager.LoadScene("DeathScreen");
+        
+        
         
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         inventory.ClearInventory();
